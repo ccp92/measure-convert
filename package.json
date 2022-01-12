@@ -1,11 +1,11 @@
 {
   "name": "measure-convert",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "A package for converting values from one unit of measurement to another",
   "main": "./lib/index.js",
   "scripts": {
     "build": "tsc",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest"
   },
   "keywords": [
     "measure-convert",
@@ -14,7 +14,10 @@
   "author": "Chris Parsons",
   "license": "MIT",
   "devDependencies": {
+    "@types/jest": "^27.4.0",
     "eslint": "^8.6.0",
+    "jest": "^27.4.7",
+    "ts-jest": "^27.1.2",
     "typescript": "^4.5.4"
   },
   "dependencies": {}
