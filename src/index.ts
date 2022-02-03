@@ -1,0 +1,1 @@
+import temperatures from "./temperatures";

@@ -1,11 +1,12 @@
 {
   "name": "measure-convert",
-  "version": "0.0.2",
+  "version": "0.1.0",
   "description": "A package for converting values from one unit of measurement to another",
   "main": "./lib/index.js",
   "scripts": {
     "build": "tsc",
-    "test": "jest"
+    "test": "jest",
+    "test:watch": "jest --watchAll"
   },
   "keywords": [
     "measure-convert",
