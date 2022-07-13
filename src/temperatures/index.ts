@@ -6,7 +6,8 @@ export const enum temperatureUnit {
 const temperatures = (
   value: number,
   sourceMeasurement: temperatureUnit,
-  targetMeasurement: temperatureUnit
+  targetMeasurement: temperatureUnit,
+  rounding: number = 0
 ) => {
   const isFahrenheitToCelsius =
     sourceMeasurement === temperatureUnit.fahrenheit &&
@@ -17,11 +18,11 @@ const temperatures = (
     targetMeasurement === temperatureUnit.fahrenheit;
 
   if (isFahrenheitToCelsius) {
-    return ((value - 32) * 5) / 9;
+    return +(((value - 32) * 5) / 9).toFixed(rounding);
   }
 
   if (isCelsiusToFahrenheit) {
-    return (value * 9) / 5 + 32;
+    return +((value * 9) / 5 + 32).toFixed(rounding);
   }
 
   throw new Error(
